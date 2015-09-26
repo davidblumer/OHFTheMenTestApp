@@ -8,9 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+#import <SVProgressHUD.h>
+
+#import <SBLanguage.h>
+#import <SBAlertViewHelper.h>
+
+#import "ImageProcessor.h"
+
+@interface MainViewController : UIViewController <UIImagePickerControllerDelegate>
 {
+    @private
+        UIImagePickerController *imagePicker;
     
 }
+
+- (void)showCamera;
 
 @end

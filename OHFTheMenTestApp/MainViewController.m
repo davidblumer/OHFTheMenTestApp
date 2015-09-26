@@ -14,14 +14,64 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)showCamera
+{
+    imagePicker = [[UIImagePickerController alloc] init];
+    
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    #if TARGET_IPHONE_SIMULATOR
+    {
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    #endif
+    
+    [imagePicker setSourceType:sourceType];
+    [imagePicker setAllowsEditing:NO];
+    [imagePicker setDelegate:self];
+    
+    if (sourceType == UIImagePickerControllerSourceTypeCamera)
+    {
+        [imagePicker setCameraDevice:UIImagePickerControllerCameraDeviceRear];
+    }
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)startButtonPressed:(id)sender
+{
+    [self showCamera];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.title = SBL(@"appTitle");
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    [ImageProcessor processImage:image callback:^(BOOL isMan)
+    {
+        [imagePicker dismissViewControllerAnimated:YES completion:nil];
+        
+        [SVProgressHUD dismiss];
+        
+        if (isMan)
+        {
+            [SBAlertViewHelper showErrorAlertViewWithText:@"yes"];
+        }else
+        {
+            [SBAlertViewHelper showErrorAlertViewWithText:@"no"];
+        }
+    }];
 }
 
 @end
