@@ -21,14 +21,25 @@
     UIImage  *whiteImage = [SBImage fillImage:beardImage withColor:[UIColor whiteColor]];
     NSString *stringName = (beardAvailable ? @"beardText" : @"noBeardText");
     
-    _infoLabel.text = [NSString stringWithFormat:SBL(stringName), percent];
-    
-    [_beardImageView setImage:whiteImage];
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
+        _infoLabel.text = [NSString stringWithFormat:SBL(stringName), percent];
+        
+        [_beardImageView setImage:whiteImage];
+        
+        [self restartAnimations];
+    });
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+- (void)restartAnimations
+{
+    [self stopAllAnimations];
+    [SBAnimationHelper appendPulseAnimationToLayer:_beardImageView.layer start:1.00f end:1.18f];
 }
 
 - (void)showCamera
@@ -60,9 +71,18 @@
     [self showCamera];
 }
 
+- (void)stopAllAnimations
+{
+    [[_beardImageView layer] removeAllAnimations];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self restartAnimations];
+    
+    self.view.alpha = 0.0f;
     
     CALayer *buttonLayer = [_startButton layer];
     
@@ -79,6 +99,10 @@
     
     [_startButton setTitle:SBL(@"startTest") forState:UIControlStateNormal];
     _infoLabel.text = SBL(@"startText");
+    
+    
+    [NSThread sleepForTimeInterval:0.25f];
+    [SBAnimationHelper setOpacityAnimated:1.0f view:self.view];
 }
 
 #pragma mark - UIImagePickerControllerDelegate

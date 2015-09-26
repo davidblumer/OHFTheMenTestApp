@@ -12,6 +12,7 @@
 #import <SVProgressHUD.h>
 
 #import <SBLanguage.h>
+#import <SBAnimationHelper.h>
 #import <SBAlertViewHelper.h>
 #import <SBImage.h>
 
@@ -28,7 +29,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 
+- (void)restartAnimations;
 - (void)setBeardAvailable:(BOOL)beardAvailable percent:(int)percent;
 - (void)showCamera;
+- (void)stopAllAnimations;
 
 @end
