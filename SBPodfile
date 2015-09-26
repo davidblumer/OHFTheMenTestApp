@@ -16,6 +16,8 @@ ObjCSBFoundation
 ObjCSBLocalArray
 ObjCSBAlertViewHelper
 ObjCSBColor
+ObjCSBImage
+ObjCSBAnimationHelper
 
 SB_PODS_END
 

@@ -15,6 +15,7 @@
 		B24D23A31BB6ED9400B2833F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24D23A11BB6ED9400B2833F /* LaunchScreen.storyboard */; };
 		B24D23AE1BB6ED9400B2833F /* OHFTheMenTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B24D23AD1BB6ED9400B2833F /* OHFTheMenTestAppTests.m */; };
 		B24D23B91BB6ED9400B2833F /* OHFTheMenTestAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B24D23B81BB6ED9400B2833F /* OHFTheMenTestAppUITests.m */; };
+		B26C20851BB718520075BF4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26C20841BB718520075BF4F /* QuartzCore.framework */; };
 		B2B0F3381BB6F0B500BD7E08 /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F3331BB6F0B500BD7E08 /* ClarifaiClient.m */; settings = {ASSET_TAGS = (); }; };
 		B2B0F3391BB6F0B500BD7E08 /* ClarifaiClientFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F3351BB6F0B500BD7E08 /* ClarifaiClientFactory.m */; settings = {ASSET_TAGS = (); }; };
 		B2B0F33A1BB6F0B500BD7E08 /* ImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F3371BB6F0B500BD7E08 /* ImageProcessor.m */; settings = {ASSET_TAGS = (); }; };
@@ -47,6 +48,7 @@
 		B2B0F3981BB6FA7700BD7E08 /* IMGImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F37A1BB6FA7700BD7E08 /* IMGImageRequest.m */; settings = {ASSET_TAGS = (); }; };
 		B2B0F3991BB6FA7700BD7E08 /* IMGMemeGen.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F37C1BB6FA7700BD7E08 /* IMGMemeGen.m */; settings = {ASSET_TAGS = (); }; };
 		B2B0F39A1BB6FA7700BD7E08 /* IMGNotificationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B0F37E1BB6FA7700BD7E08 /* IMGNotificationRequest.m */; settings = {ASSET_TAGS = (); }; };
+		B2B0F39C1BB709DE00BD7E08 /* SBPodfile in Resources */ = {isa = PBXBuildFile; fileRef = B2B0F39B1BB709DE00BD7E08 /* SBPodfile */; settings = {ASSET_TAGS = (); }; };
 		B6FAE38A8772799A2F65B523 /* libPods-OHFTheMenTestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A546449F2D0BEB8063C7DA17 /* libPods-OHFTheMenTestApp.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,7 @@
 		B24D23B41BB6ED9400B2833F /* OHFTheMenTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OHFTheMenTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24D23B81BB6ED9400B2833F /* OHFTheMenTestAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OHFTheMenTestAppUITests.m; sourceTree = "<group>"; };
 		B24D23BA1BB6ED9400B2833F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26C20841BB718520075BF4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B2B0F3321BB6F0B500BD7E08 /* ClarifaiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
 		B2B0F3331BB6F0B500BD7E08 /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
 		B2B0F3341BB6F0B500BD7E08 /* ClarifaiClientFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClarifaiClientFactory.h; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		B2B0F37C1BB6FA7700BD7E08 /* IMGMemeGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMGMemeGen.m; sourceTree = "<group>"; };
 		B2B0F37D1BB6FA7700BD7E08 /* IMGNotificationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMGNotificationRequest.h; sourceTree = "<group>"; };
 		B2B0F37E1BB6FA7700BD7E08 /* IMGNotificationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMGNotificationRequest.m; sourceTree = "<group>"; };
+		B2B0F39B1BB709DE00BD7E08 /* SBPodfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SBPodfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26C20851BB718520075BF4F /* QuartzCore.framework in Frameworks */,
 				B6FAE38A8772799A2F65B523 /* libPods-OHFTheMenTestApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +190,7 @@
 		1B74EE41170E243C69F8F611 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B26C20841BB718520075BF4F /* QuartzCore.framework */,
 				A546449F2D0BEB8063C7DA17 /* libPods-OHFTheMenTestApp.a */,
 			);
 			name = Frameworks;
@@ -224,6 +230,7 @@
 		B24D23921BB6ED9400B2833F /* OHFTheMenTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2B0F39B1BB709DE00BD7E08 /* SBPodfile */,
 				B2B0F32F1BB6EFF100BD7E08 /* Assets */,
 				B2B0F32D1BB6EFC100BD7E08 /* Code */,
 				B2B0F3301BB6EFF800BD7E08 /* External */,
@@ -524,6 +531,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B0F39C1BB709DE00BD7E08 /* SBPodfile in Resources */,
 				B24D23A31BB6ED9400B2833F /* LaunchScreen.storyboard in Resources */,
 				B2B0F3401BB6F14E00BD7E08 /* Localizable.strings in Resources */,
 				B24D23A01BB6ED9400B2833F /* Assets.xcassets in Resources */,

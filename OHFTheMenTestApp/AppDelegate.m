@@ -20,6 +20,7 @@
     [IMGSession anonymousSessionWithClientID:@"04cc6ae571c2f47" withDelegate:self];
     [self initAlertViewHelper];
     
+    
     return YES;
 }
 

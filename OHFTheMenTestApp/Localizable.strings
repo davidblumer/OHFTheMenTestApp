@@ -7,4 +7,8 @@
 */
 "anErrorOccurred" = "Es ist ein Fehler aufgetreten";
 "appTitle"        = "The man test";
+"beardText"       = "Yeah, ein echter Mann. %i%% Bart!";
+"noBeardText"     = "Sorry, leider kein echter Mann. Nur %i%% Bart.";
 "ok"              = "OK";
+"startTest"       = "\"The Man Test\" starten";
+"startText"       = "Start-Button drücken um den Test zu starten.";

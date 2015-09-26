@@ -17,7 +17,7 @@
 
 #import "ClarifaiClientFactory.h"
 
-typedef void (^ImageProcessorCallback)(BOOL isMan);
+typedef void (^ImageProcessorCallback)(BOOL isMan, int percent);
 
 @interface ImageProcessor : NSObject
 {

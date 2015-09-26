@@ -16,7 +16,14 @@
     
     // TODO: Scale down?
     
-    NSData *jpegData = UIImageJPEGRepresentation(image, 0.9);
+    CGSize size = CGSizeMake(320, 320 * image.size.height / image.size.width);
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    
+    NSData *jpegData = UIImageJPEGRepresentation(scaledImage, 0.9);
     /*
     [IMGImageRequest uploadImageWithData:jpegData title:@"Beard" success:^(IMGImage *image)
     {
@@ -34,15 +41,12 @@
     {
          if (error)
          {
-             callback(NO);
+             callback(NO, 0);
          }
          else
          {
              ClarifaiPredictionResult *result = results.firstObject;
-             callback(result.score > 0.5f);
-             
-             NSString *resultString = [NSString stringWithFormat:@".2f", result.score];
-             [SBAlertViewHelper showErrorAlertViewWithText:resultString];
+             callback(result.score > 0.5f, (int)(result.score * 100.0f));
          }
      }];
 }

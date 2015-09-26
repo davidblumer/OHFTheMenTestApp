@@ -6,12 +6,14 @@
 //  Copyright © 2015 Socialbit GmbH. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
 #import <SVProgressHUD.h>
 
 #import <SBLanguage.h>
 #import <SBAlertViewHelper.h>
+#import <SBImage.h>
 
 #import "ImageProcessor.h"
 
@@ -22,6 +24,11 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UIImageView *beardImageView;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+
+- (void)setBeardAvailable:(BOOL)beardAvailable percent:(int)percent;
 - (void)showCamera;
 
 @end

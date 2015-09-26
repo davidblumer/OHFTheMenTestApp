@@ -3,6 +3,7 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B22FBBBDF4EADE0B7A76A2A25A7F6769E615A9EB" : 0,
     "8AE1EB2E6555E014305AE17D01655F135F84957D" : 0,
     "FD0D05E46051519A5674606F95D0807D29F8EC61" : 0,
     "42739AA75968B35539C9659CAE7470996E0E328F" : 0,
@@ -18,6 +19,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5E8F3C09-7095-4216-92E0-44105BB2273F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B22FBBBDF4EADE0B7A76A2A25A7F6769E615A9EB" : "..\/Pods\/ObjCSBImage",
     "8AE1EB2E6555E014305AE17D01655F135F84957D" : "..\/Pods\/ObjCSBAlertViewHelper",
     "FD0D05E46051519A5674606F95D0807D29F8EC61" : "..\/Pods\/ObjCSBLanguage",
     "42739AA75968B35539C9659CAE7470996E0E328F" : "..\/Pods\/ObjcSBCrypto",
@@ -64,6 +66,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/socialbitgmbh\/objcsbfoundation.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A1DDE82D693B5A74988F590D184755785E086009"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/socialbitgmbh\/objcsbimage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B22FBBBDF4EADE0B7A76A2A25A7F6769E615A9EB"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:socialbitgmbh\/objcsbcolor.git",
